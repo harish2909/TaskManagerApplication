@@ -1,0 +1,124 @@
+-----------------------------------------------------------------------------------------------------------------
+TASK CRUD OPERATIONS
+-----------------------------------------------------------------------------------------------------------------
+
+To display all the tasks:GET
+http://localhost:7090/SpringBootTaskmanager/tasks/all
+To display the task by passing id:GET
+http://localhost:7090/SpringBootTaskmanager/tasks/1002
+To insert a new task details:POST
+http://localhost:7090/SpringBootTaskmanager/tasks/add
+
+POST Request:
+{
+"name":"Code Review",
+"label":{"name":"ProjectB","label":"B"},
+"startDate":"2019-04-25",
+"endDate":"2019-04-28",
+"priority":"CRITICAL"
+}
+
+To Update a task by passing id:PUT
+http://localhost:7090/SpringBootTaskmanager/tasks/update/1003
+
+PUT Request:
+{
+"name":"Deployment",
+"priority":"LOW"
+}
+
+To Delete a task by passing id: DELETE
+http://localhost:7090/SpringBootTaskmanager/tasks/delete/1004
+
+To delete all tasks:DELETE
+http://localhost:7090/SpringBootTaskmanager/tasks/deleteall
+
+-----------------------------------------------------------------------------------------------------------------
+LABEL CRUD OPERATIONS
+-----------------------------------------------------------------------------------------------------------------
+ To display all the Labels:GET
+http://localhost:7090/SpringBootTaskmanager/labels/all
+To display the label by passing name:GET
+http://localhost:7090/SpringBootTaskmanager/labels/ProjectB
+To insert a new label details:POST
+http://localhost:7090/SpringBootTaskmanager/labels/add
+
+POST Request:
+{
+"name":"ProjectG",
+"label":"G"
+}
+
+
+To Update a label by passing name:PUT
+http://localhost:7090/SpringBootTaskmanager/labels/update/ProjectB
+
+PUT Request:
+{
+"label":"H",
+}
+
+To Delete a label by passing name: DELETE
+http://localhost:7090/SpringBootTaskmanager/labels/delete/ProjectA
+
+To delete all labels:DELETE
+http://localhost:7090/SpringBootTaskmanager/labels/deleteall
+
+
+-----------------------------------------------------------------------------------------------------------------
+Search Operations in TASK
+-----------------------------------------------------------------------------------------------------------------
+
+METHOD : POST
+URL: http://localhost:7090/SpringBootTaskmanager/tasks/search
+
+SAMPLE REQUEST: 
+{
+"noOfdays":"0",
+"previous":"false",
+"next":"false",
+"startDate":"2019-04-18",
+"endDate":"2019-04-22",
+"priority":[{"name":"HIGH"},{"name":"CRITICAL"}],
+"label":[{"name":"A"},{"name":"B"}]
+}
+
+HOW TO TEST SEARCH OPERATIONS:
+
+1. Filter using Dates:
+
+-- To get the tasks based on some date, then need to provide the startDate value,
+then all the tasks with given date as startdate and the same considered as enddate ,then displayed in the output.
+
+--To get the tasks with in some period then need to provide the startdate and enddate values,
+then all the tasks within that period will be displayed
+
+--If needed the tasks till some end date then need to provide the enddate value alone and startdate will be considered as todays date internally.
+then all the tasks from current day to given end date will be displayed.
+
+--If required to get the next X days tasks then need to provide the noOfDays values as X and next value as true.
+so will consider the next X days and will be displayed all the tasks within that period.
+
+--If required to get the previous X days tasks then need to provide the noOfDays value as X and previous value as true.
+So will consider the startdate as currentdate-X days and enddate as currentDay amd will display the tasks.
+
+--If no need of any date conditions then just give the default values(noOfDays:0,next:false,previous:false,startDate:"",endDate:"") and proceed to next.
+
+2. Filter Using Priority
+
+--Need to get the tasks based on priorities then just add the priority names(HIGH/CRITICAL/LOW/MEDIUM) in the priority list
+so that will be used the given priorities in IN clause and get all the tasks
+
+--No need of priority condition then just give the default value(priority:[])
+
+3. Filter Using Labels
+
+--Need to get the tasks based on labels then just add the label names in the label list
+so that will be used the given labels in IN clause and get all the tasks
+
+--No need of label condition then just give the default value(label:[])
+
+4. Can Provide all the above conditions at a time and filter the tasks
+But either startDate/endDate to be used else noOfDays/next/Previous to be used when adding date conditions.
+
+5.If all values are given default values then all the available tasks in TASK table will be displayed.

@@ -1,0 +1,13 @@
+com\jaza\springboot\rest\model\Task.class
+com\jaza\springboot\rest\model\Label.class
+com\jaza\springboot\rest\vo\SearchRequestVo.class
+com\jaza\springboot\rest\controller\Taskcontroller.class
+com\jaza\springboot\rest\config\DataConfig.class
+com\jaza\springboot\rest\repository\TaskRepositoryImpl.class
+com\jaza\springboot\rest\service\TaskServiceImpl.class
+com\jaza\springboot\rest\vo\PriorityVo.class
+com\jaza\springboot\rest\repository\TaskRepositoryCustom.class
+com\jaza\springboot\rest\vo\LabelVo.class
+com\jaza\springboot\rest\service\TaskService.class
+com\jaza\springboot\rest\config\TaskManagerApplication.class
+com\jaza\springboot\rest\repository\TaskRepository.class

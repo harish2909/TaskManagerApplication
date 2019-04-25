@@ -1,0 +1,13 @@
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\config\DataConfig.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\model\Label.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\service\TaskService.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\service\TaskServiceImpl.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\repository\TaskRepositoryImpl.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\repository\TaskRepository.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\model\Task.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\config\TaskManagerApplication.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\vo\LabelVo.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\vo\SearchRequestVo.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\vo\PriorityVo.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\controller\Taskcontroller.java
+D:\TaskManagerWorkspace\SpringBootTaskmanager\src\main\java\com\jaza\springboot\rest\repository\TaskRepositoryCustom.java

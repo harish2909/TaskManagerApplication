@@ -1,0 +1,11 @@
+- Run Data.sql file in H2 db.
+- Import the project as Maven Project in Eclipse
+- Do the Maven Update for the project
+- Add the H2 driver/URL/Username/password details in application.properties and database.properties files
+- Run Maven install
+- War file will be generated in Target folder.
+- Add the Tomcat Server
+- Deploy generated WAR file in Tomcat.
+- Context root the application :SpringBootTaskmanager
+- Please refer to ReatApiDocumentation text file for URLs 
+- Need to change the localhost port number to yours port number in URL before hitting the service/operation
